@@ -15,10 +15,11 @@
 //     return $router->app->version();
 // });
 
-//komen atas jalankan yang bawah ini
-// $router->get('/', function () use ($router) {
-//     return "Halo Dunia";
-// });
+$router->get('/produk', 'ProdukController@index');
+$router->get('/produk/{id}', 'ProdukController@show');
+$router->post('/produk', 'ProdukController@create');
+$router->put('/produk/{id}', 'ProdukController@update');
+$router->delete('/produk/{id}', 'ProdukController@destroy');
 
-// buat routing endpoind baru
-$router->get('/produk', 'ProdukController@create');
+$router->post('/register', 'UserController@register');
+$router->post('/login', 'UserController@login');
